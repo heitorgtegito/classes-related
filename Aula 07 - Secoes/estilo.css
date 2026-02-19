@@ -1,0 +1,41 @@
+/* Seleciona todos os seletores*/
+*{
+    margin: 0px; /* Espaçamento Externo */
+    padding: 0px; /* Espaçamento Interno */
+}
+
+body {
+    background-color: cadetblue;
+    color: white;
+    font-family: 'Century Gothic', Arial ;
+}
+
+/* Seletor com especificidade */
+nav ol { /* Seleciona o OL que tá dentro da marcação de NAV */
+    margin: 2em;
+    list-style-type: none;
+}
+
+/* Seletores Agrupados */
+header, footer { /* A vírgula é pra falar q tanto o header quanto o footer vão receber as coisas */
+    background-color: darkcyan;
+    padding: 3em; 
+    text-align: center;
+}
+
+a {
+    color: rgb(36, 38, 39);
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(36, 38, 39);
+}
+
+a:visited {
+    color: rgb(36, 38, 39);
+}
+
+a:active {
+    color: rgb(36, 38, 39);
+}

@@ -1,0 +1,27 @@
+a.Sem {
+    color: cornsilk;
+    text-decoration: none;
+}
+a {
+    color: cornsilk; 
+}
+a:hover {
+    background-color: cadetblue;
+}
+a:visited {
+    color: gray;
+}
+/*a:active {
+    background-color: aqua;
+} */
+h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    text-decoration: none;
+}
+body {
+    background-color: darkslategray;
+    color:white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2em;
+}

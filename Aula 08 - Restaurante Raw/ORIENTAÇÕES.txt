@@ -1,0 +1,3 @@
+COR AMARELA: #F5BD26
+cor amarela clara: #F9F1DC
+fonte: Garamond

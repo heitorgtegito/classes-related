@@ -1,0 +1,48 @@
+html {
+    background-color: rgba(125, 224, 224, 0.89);
+}
+
+h1 {
+    color: black;
+    font-size: 500%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align-last: center;
+}
+
+h2 {
+    color: black;
+    font-family: 'Courier New', Courier, monospace;
+    text-align-last: center;
+}
+
+p {
+    color: black;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, monospace;
+    text-align-last: center;
+}
+
+hr {
+    border: 0px;
+}
+
+address {
+    text-align: center;
+}
+
+body {
+    align-items: center;
+    align-self: center;
+    text-align: center;
+}
+
+ol, ul {
+    text-align: center;
+}
+
+.one {
+    list-style-position: inside;
+}
+
+.two {
+    list-style-position: inside;
+}

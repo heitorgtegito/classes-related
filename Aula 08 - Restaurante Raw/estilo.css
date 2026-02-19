@@ -1,0 +1,38 @@
+body {
+    text-align: center;
+    background-color: #f9f1dc;
+    font-family: 'EB Garamond';
+}
+figure {
+    resize:both;
+    text-align: center;
+}
+figure img {
+    display: block;
+    border-bottom: 2px solid #f5bd26;
+    border-top: 2px solid #f5bd26;
+    margin: 0 auto;
+}
+h2 {
+    font-family: 'Imperial Script';
+    border-bottom: 2px solid #f5bd26;
+}
+p {
+    font-size: 12px;
+    margin-left: 675px;
+    margin-right: 675px;
+    text-align-last: center;
+}
+footer {
+    height: 30px;
+    background-color: white;
+    padding-bottom: 0%;
+}
+ul {
+    width: 60em; /* define a largura da lista */
+    margin: 0 auto /* coloca a lista no centro */
+}
+li {
+    list-style-type: none; /* remove os marcadores*/
+    display: inline-block; /* permite q os itens fiquem lado a lado */
+}

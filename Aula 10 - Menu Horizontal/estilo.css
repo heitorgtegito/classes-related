@@ -1,0 +1,46 @@
+a, a:hover, a:visited { 
+    /* Ancora tem como display padrão o Inline; Inline é um comportamento da marcação, uma característica é que a área é apenas onde tem caracteres */
+    /* Ex.: b, strong, big, i, em, a, .... Todos os "modificadores" são assim */
+    display: inline;
+    background-color: aqua;
+    text-decoration: none;
+    color: black;
+    width: 15rem;
+}
+span {
+    background-color: aquamarine;
+}
+footer {
+    /* Footer tem como display padrão o Block; Block é um comportamento da marcação, uma característica é que a área dela é o bloco todo */
+    /* Ex.: header, main, h1-h6, li, ol, ul, figure, .... Todos de seção são assim */
+    background-color: deeppink;
+    width: 15rem;
+}
+div#tudo {
+    background-color: #ddd;
+    font-family: "Century Gothic";
+    max-width: 50rem; /* Define a largura máxima para que a página se torne responsiva a largura */
+    padding: 2em;
+    margin: 2em auto; /* Espaçamento externo; a Margin -valor- auto == Esse valor é para cima/baixo. Esse auto centraliza a página da esquerda/direita (Não funciona pra padding, nem para Cima/baixo). */
+    /* O max-width trabalha junto com o margin, pq é necessário uma largura maior do que o conteúdo, para ele poder ser centralizado */
+}
+nav li {
+    display: inline-block;
+}
+nav a {
+    /* Formata os âncoras que estão apenas de dentro do nav */
+    display: inline-block;
+    /* Permite que um fique ao lado do outro, assim como no inline, e permite definir a largura, assim como no block */
+    width: 7rem;
+    color:aqua;
+    background-color: darkcyan;
+    text-decoration: none;
+    text-align: center;
+    padding: 1em;
+}
+nav a:hover {
+    display: inline-block;
+    width: 7rem;
+    background-color: aqua;
+    color: darkcyan;
+}

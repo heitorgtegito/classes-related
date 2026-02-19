@@ -1,0 +1,63 @@
+body {
+    background-color: rgba(0, 0, 139, 0.398);
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+table { /* Colocar o collapse ele quebra as barreirinhas de vácuo entre cada célula ----- Margin: auto joga a tabela lá pro centro da página, só levando em conta a centralização horizontal ---- Width aumenta a largura da célula*/
+    border-collapse: collapse;
+    margin: auto;
+    width: 40em;
+}
+tr:nth-child(5){ /* É qual linha que fica em destaque --- Os : puxa a subclasse nth-child do tr  -- da pra botar odd pra ser as linhas impares e even pra ser as pares */
+    background-color: dodgerblue;
+}
+th, td { /* A , (vírgula) para colocar ambas as tags com as mesmas características */
+    border: 3px solid rgb(147, 187, 226);
+    padding: 0.5em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

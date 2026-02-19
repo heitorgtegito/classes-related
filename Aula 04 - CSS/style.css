@@ -1,0 +1,15 @@
+/* Aqui a gente tem os seletores, no caso, body é o seletor 01, é meio q a pasta, ai a gente abre a pasta pra mexer dentro dela. */
+body {
+    background-color: cadetblue; /*Cor do plano de fundo ---- E precisa de ponto-vírgula(;;;;;)*/
+    font-family: Arial, Helvetica, sans-serif; /*Muda a fonte*/
+    font-size: 30px; /*Muda o tamanho da fonte, a professora colocou 2em, sendo q isso cria a barra lateral para descer na página e eu nao gosto disso, acho feio.*/
+    margin-left: 80px;
+    margin-top: 55px;
+}
+h1{
+    text-align: center; /*Coloca o título "INFOWEB" no centro da página*/
+    color: rgb(199, 78, 78);
+}
+li::marker {
+    font-size: 30px;
+}
