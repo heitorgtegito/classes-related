@@ -1,0 +1,67 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+header, footer {
+    text-align: center;
+    background-color: cadetblue;
+    color: white;
+    padding: 2rem;
+}
+header a {
+    color: white;
+}
+h1 {
+    margin-bottom: 2rem;
+}
+nav ol {
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+    gap: 1rem;
+}
+nav a {
+    display: inline-block;
+    text-decoration: none;
+    background-color: rgb(79, 128, 129);
+    padding: 1rem;
+}
+nav a:hover{
+    background-color: rgb(41, 169, 173);
+}
+main {
+    max-width: 70rem;
+    /* tbm ajuda na responsividade */
+    margin: 2rem auto;
+    margin-top: 15rem;
+}
+header {
+    position: fixed;
+    width: 100vw;
+    top: 0;
+}
+
+/* Responsividade games - resposta do site ao dispositivo */
+@media (max-width: 1024px){
+    body{
+        background-color: aqua;
+    }
+
+}
+@media (max-width: 768px){
+    body{
+        background-color: #f2f2f2;
+    }
+    header{
+        background-color: black;
+    }
+    nav{
+        /* visibility: hidden; */
+        display: none;
+        /* ambos ocultam o nav ai, só q o visibility ele mantém o espaço q o bagulho ocupa, só deixando invisivel mesmo, já o display tira fr */
+    }
+}

@@ -1,0 +1,10 @@
+body {
+    background-color: gray;
+}
+
+a::botao {
+    text-decoration: none;
+}
+a::botao:visited {
+    color: black;
+}

@@ -1,0 +1,21 @@
+figure{
+    float:right;
+}
+
+img{  /*Sombra no rolê. Eixo x, eixo y, desfoque, tamanho e cor-*/
+    box-shadow: 0 0 5px 2px #bbb;
+} 
+
+body {
+    background-image: url(background.png), url(bg-marca.png);
+    background-repeat: no-repeat, no-repeat;
+    background-position: center, center;
+    background-attachment: fixed, scroll;
+    background-size: 100%, auto;
+}
+h1{
+    padding: 5em;
+    text-align: center;
+    background-image: linear-gradient(90deg, red, blue, green);
+}
+

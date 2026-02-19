@@ -1,0 +1,22 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+}
+header {
+    text-align: center;
+}
+header li{
+    /* seletor com especificidade
+        seleciono o li que tá dentro do header 
+    */
+    display: inline-block;
+}
+header li a {
+    display: inline-block;
+    border: 1px solid blue;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+}
+header a:hover {
+    background-color: aquamarine;
+}

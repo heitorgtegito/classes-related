@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+main {
+    margin: 2rem;
+    background-color: rgb(22, 161, 161);
+}
+ul {
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+    gap: 2%;
+}
+li {
+    margin: 2rem;
+    border: 1px solid black;
+    padding: 1%;
+}
+img {
+    width: 20rem;
+    height: 10rem;
+}

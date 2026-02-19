@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    text-align: center;
+    font-family: "Century Gothic";
+}
+h1 {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #273069;
+}
+h2 {
+    width: 200px;
+    margin: 20px auto 4rem auto;
+    font-size: 20px;
+    color: #273069;
+    border-bottom: 12px solid #40B89E;
+}
+nav li {
+    list-style: none;
+    display: inline-block;
+}
+nav a, nav:visited {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    width: 8rem;
+    background-color: #599DDB;
+    padding: 0.6em;
+    margin: 0.5rem;
+}
+nav a:hover {
+    background-color: hsl(209, 44%, 24%);
+}
+table {
+    margin: auto;
+    width: 70rem;
+    border-collapse: collapse;
+    border-left: 10px solid #80CF66;
+}
+th {
+    background-color: #E9E9E9;
+}
+td {
+    padding: 2rem;
+    text-align: left;
+    background-color: #F0F0F0;
+    border-bottom: 1px solid #374EA9;
+}
+tr {
+    height: 6rem;
+}
+td.Evento {
+    width: 400px;
+}
+tr:last-child td {
+    border-bottom: 0;
+}
+footer {
+    background-color: #273069;
+    margin: 5rem 0 0 0;
+    padding: 5rem;
+}
+footer p {
+    color: white;
+    margin: auto;
+}
+
+div {
+    margin: 2rem auto auto auto;
+    padding: 2rem 0 2rem 2rem;
+    text-align: left;
+    background-color: #F0F0F0;
+    width: 40rem;
+    border-left: 0.5rem solid #80CF66;
+}

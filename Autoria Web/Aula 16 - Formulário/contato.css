@@ -1,0 +1,39 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: ghostwhite;
+}
+form {
+    border: 1px solid lightpink;
+    border-radius: 1rem;
+    text-align: center;
+    padding: 2rem;
+    max-width: 50rem;
+    margin: 0 auto;
+}
+label {
+    display: inline-block;
+    text-align: left;
+    width: 10rem;
+    margin-bottom: 0.5rem;
+    vertical-align: top;
+    /* Coloca a label alinhada verticalmente com a label, como é TOP ele fica lá em cima */
+}
+input, textarea {
+    border: none;
+    outline: 1px solid chartreuse;
+    /* Segunda borda da caixinha do input e do textarea */
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 0.5rem gray;
+    width: 15rem;
+}
+input[type='submit'] {
+    /* Seleciona o input q tem o atributo type com o valor 'submit' */
+    background-color: rgb(37, 110, 188);
+    color: white;
+}
+input:focus, textarea:focus{
+    /* Essa subclasse focus aí é pra quando tu clica no input tlgd, quando ele for selecionado ele tá no modo focus, aí se tu quiser personalizar isso é usando o :focus */
+    box-shadow: 0 0 0.5rem gray;
+}

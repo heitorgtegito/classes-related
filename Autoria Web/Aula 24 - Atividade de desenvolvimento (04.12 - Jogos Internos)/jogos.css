@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    color: white;
+    background-image: linear-gradient(90deg, #A12FFD, #1DB5FD );
+    font-family: "Century Gothic";
+}
+header {
+    display: flex;
+    padding: 1rem;
+    flex-wrap: wrap;
+    margin: 1rem 2rem;
+}
+header h1 {
+    flex-basis: 98%;
+    font-size: 32px;
+}
+header h2 {
+    flex-basis: 60%;
+    font-size: 24px;
+    font-weight: lighter;
+}
+nav ul {
+    display:flex;
+    gap: 3%;
+}
+nav li {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    list-style-type: none;
+}
+nav a {
+    height: 3rem;
+    width: 10rem;
+    text-align: center;
+    align-content: center;
+    background-color: #FFFFFF33;
+    font-size: 20px;
+    color: black;
+    text-decoration: none;
+    font-weight: bolder;
+}
+main {
+    display: flex;
+    margin: 4rem 0rem 1rem 0rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1%;
+    background-color: #070B14;
+}
+section {
+    background-color: #0A1E40;
+    margin: 2rem;
+    padding: 2rem;
+    width: 45rem;
+    height: 45rem;
+    display: flex;
+    gap: 5%;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    border-radius: 1.5rem 1.5rem 1.5rem 1.5rem ;
+}
+section.lateral {
+    width: 20rem;
+    display: flex;
+    gap: 0%;
+    justify-content: center;
+    align-content: start;
+}
+div {
+    display: flex;
+    width: 167px;
+    height: 167px;
+    background-color: #45546E;
+}
+div p {
+    font-size: 24px;
+    margin: 0 auto;
+    align-content: center;
+}
+input {
+    background-color: #45546E;
+    width: 16rem;
+    height: 2rem;
+}
+img {
+    margin: 4rem 0 0 0;
+    width: 16rem;
+}
+footer {
+    padding: 1rem;
+    text-align: center;
+    font-weight: 600;
+}

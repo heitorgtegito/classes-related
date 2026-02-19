@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-size: 1rem;
+    font-family: "Century Gothic";
+}
+header, footer {
+    padding: 2rem;
+    background-color: darkcyan;
+    text-align: center;
+    color: rgb(235, 235, 235);
+}
+header ol /* O ol q recebe o display flex, pq é onde tem os itens ; Pode também usar display inline-block nos LI's tlgd, mas usar display flex é mais dboa*/ {
+    display: flex;
+    justify-content: center;
+    /* O text-align nao funciona pq já tem display:flex */
+    list-style-type: none;
+    gap: 2%;
+}
+header a {
+    text-decoration: none;
+    color: rgb(235, 235, 235);
+}
+nav a:hover {
+    border-bottom: 1px dashed rgb(247, 212, 212);
+}
+main {
+    max-width: 60rem;
+    /* Max-Width define a largura máxima daquele item tlgd, ele não fica redimensionado; Tá interligado com a responsisividade */
+    margin: 2rem auto;
+    /* O container só fica no centro se tiver largura definida */
+    border: 1px solid #d1d1d1;
+    padding: 2rem;
+}
+main section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2%;
+}
+main section h2 {
+    margin: 2rem 0;
+    flex-basis: 100%;
+}
+main section div {
+    border-radius: 1rem;
+    padding: 2%;
+    box-shadow: 0 0 10px 0 gray;
+    flex-basis: 14%;
+    /* Flex-Basis --> Define a largura do ITEM (h2) do CONTAINER (section); Posso usar só a largura mas o flex-basis é mais indicado quando se tem display:flex */
+    /* PEGA TUDO EM PORCENTAGEM VIU --> Pega o gap entre cada elemento aí q tem (vou chamar de G), pega a quantidade de padding horizontal de cada elemento (vou chamar de P) 
+    Aí faz 100 - (G+P) = N, aí divide N pela quantidade de cards q tu tem ali.*/
+}
+main section.QuatroCards div {
+    flex-basis: 19%;
+    /* Por exemplo aqui, tem 4 cards, gap de 2% entre cada card e um padding de 2%, no caso é 3(Quantidade de Gaps)*2(Porcentagem) => G = 6;
+    Pega o padding (2) e as ocorrências (8), multiplica => P = 16; Por fim, faz 100 - 22 = 78 e divide pela quantidade de cards (4), então fica 78/4 = 19 */
+}

@@ -1,0 +1,14 @@
+main {
+    display: flex;
+    max-width: 70rem;
+}
+ol {
+    display: flex;
+    flex-wrap: wrap;
+}
+li img#logo_vertical {
+    width: 120%;
+}
+li img#logo_horizontal {
+    width: 80%;
+}

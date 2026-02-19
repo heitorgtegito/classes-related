@@ -1,0 +1,37 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+main {
+    margin: 4rem;
+}
+section {
+    display: flex;
+    gap: 2%;
+}
+div {
+    display: flex;
+    border: 1px solid rgba(8, 133, 133, 0.774);
+    border-radius: 0 2rem 0 2rem ;
+    padding: 2%;
+    flex-wrap: wrap;
+}
+h3 span {
+    font-weight: normal;
+}
+h3, span{
+    flex-basis: 50%;
+}
+h3 {
+    margin-top: 3rem;
+    font-size: 24px;
+}
+span {
+    font-size: 18px;
+}
+figure {
+    flex-basis: 50%;
+}
+img {
+    width: 128px;
+}

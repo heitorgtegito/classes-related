@@ -1,0 +1,34 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+form {
+    text-align: center;
+    width: 20rem;
+    margin: 2em auto;
+    background-color: #f2f2f2;
+    padding: 5em;
+}
+label {
+    display: inline-block;
+    width: 7rem;
+    /* Label é uma tag inline, então ela não aceitaria o atributo de width, que nesse caso, coloca uma largura pra label, afim de alinhar as 2 caixas de input; 
+    Por isso o inline-block */
+    margin-bottom: 1rem;
+    text-align: left;
+}
+input[type='submit']{
+    background-color: blueviolet;
+    padding: 0.5em 1rem;
+    color: cornsilk;
+    height: 2rem;
+}
+input[type='submit']:hover{
+    background-color: darkgray;
+}
+input{
+    width: 10rem;
+    height: 1.2rem;
+    border-radius: 0.3rem;
+    border: 1px solid gray;
+    box-shadow: 0 0 0.1em 0.05em gray;
+}

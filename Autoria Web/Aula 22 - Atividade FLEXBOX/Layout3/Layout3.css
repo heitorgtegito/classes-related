@@ -1,0 +1,37 @@
+body {
+    font-family: "Century Gothic";
+}
+nav {
+    margin: 2rem;
+}
+ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+li {
+    padding: 2rem;
+    text-align: center;
+}
+li.primeiro{
+    background-color: rgb(19, 148, 148);
+}
+li.segundo{
+    background-color: rgb(14, 128, 128);
+}
+li.terceiro{
+    background-color: rgb(12, 105, 105);
+}
+li.quarto{
+    background-color: rgb(8, 75, 75);
+}
+
+a, a:visited, a:hover {
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+}
+img {
+    width: 128px;
+    height: 128px;
+}

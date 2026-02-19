@@ -1,0 +1,57 @@
+*  {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: "Century Gothic";
+    display: flex;
+}
+header {
+    height: 45rem;
+    padding: 2rem;
+    background-color: rgb(243, 243, 243);
+}
+header h1 {
+    text-align: center;
+    font-size: 14px;
+    margin: 1rem auto 3rem auto;
+}
+header nav ul li {
+    list-style-type: none;
+    display: flex;
+    padding: 1rem;
+    justify-content: center;
+}
+a {
+    text-align: center;
+    width: 5rem;
+    font-size: 12px;
+    padding: 1rem;
+    background-color: rgb(225, 225, 225);
+    text-decoration: none;
+    color: black;
+}
+/* Acho que aqui tá tudo certo */
+main {
+    margin: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+section {
+    background-color: rgb(1, 255, 255);
+    padding: 1.5rem 7.5rem;
+}
+section h2, section p {
+    text-align: center;
+}
+h2 {
+    font-weight: normal;
+}
+p {
+    font-weight: bold;
+}
+img {
+    width: 80%;
+    height: 80%;
+}

@@ -1,0 +1,84 @@
+.creepster-regular {
+    font-family: "Creepster", system-ui;
+    font-style: normal;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Century Gothic';
+    background-color: rgb(51, 28, 59);
+    color: rgb(218, 173, 218);
+    text-align: center;
+}
+nav {
+    font-size: 20px;
+    padding: 2rem auto;
+}
+section {
+    margin: 3rem 0 6rem 0;
+}
+a {
+    text-decoration: none;
+    color: rgb(218, 173, 218);
+}
+li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 5rem 0 5rem;
+    padding: 1rem 1rem;
+}
+li:hover {
+    box-shadow: 0 0 1rem 5px rgb(115, 77, 122);
+}
+h1 {
+    font-family: 'Creepster';
+    font-size: 5rem;
+    margin: 2rem;
+}
+h2 {
+    font-size: 40px;
+    margin: 0 0 1rem;
+}
+p {
+    font-size: 16px;
+}
+footer {
+    margin: 4rem 0 0 0;
+}
+img {
+    width: 20px;
+    margin: 0 8px 0 0;
+}
+form {
+    display: inline-block;
+    width: 30rem;
+    padding: 3rem 1rem;
+    border-radius: 2rem;
+    margin: 0 auto;
+    box-shadow: 0 0 3rem rgba(43, 6, 35);
+}
+label {
+    display: inline-block;
+    text-align: left;
+    width: 10rem;
+    margin-bottom: 0.5rem;
+    vertical-align: top;
+    font-size: 1rem;
+}
+input, textarea {
+    border: none;
+    outline: 1px solid rgb(105, 25, 88);
+    /* Segunda borda da caixinha do input e do textarea */
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 0.8rem 1px rgb(180, 108, 221);
+    width: 15rem;
+}
+input[type='submit'] {
+    margin: 2rem 0 0 0;
+    background-color: rgb(41, 17, 49);
+    color: rgb(218, 173, 218);
+}

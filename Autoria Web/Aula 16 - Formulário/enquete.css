@@ -1,0 +1,10 @@
+body {
+    font-family: "Century Gothic";
+    font-weight: bold;
+}
+form {
+    background-color: aliceblue;
+    width: 25rem;
+    margin: 0 auto;
+    padding: 0 2rem;
+}

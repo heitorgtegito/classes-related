@@ -1,0 +1,22 @@
+table { /* Colocar o collapse ele quebra as barreirinhas de vÃ¡cuo entre cada cÃ©lula ----- Margin: auto joga a tabela lÃ¡ pro centro da pÃ¡gina, sÃ³ levando em conta a centralizaÃ§Ã£o horizontal ---- Width aumenta a largura da cÃ©lula*/
+    border-collapse: collapse;
+    margin: 4rem auto;
+    width: 70em;
+    font-family: "Google Sans Code";
+}
+th, td { /* A , (vÃ­rgula) para colocar ambas as tags com as mesmas caracterÃ­sticas */
+    border: 5px dashed  #453a86d5;
+    padding: 0.5em;
+}
+th {
+    font-size: larger;
+}
+td#vazia {
+    border: none;
+}
+td:hover{
+    background-color: rgba(255, 166, 0, 0.39);
+}
+td#vazia:hover {
+    background-color: white;
+}

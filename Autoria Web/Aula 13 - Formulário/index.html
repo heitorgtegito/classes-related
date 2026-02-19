@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Formulários</title>
+        <link rel="stylesheet" href="form.css">
+    </head>
+    <body>
+        <form action="recebe-dados.html">
+            <!-- Tag necessária para a criação de formulários ;;; O Atributo ACTION recebe o ARQUIVO que vai processar os dados (arquivo de backend)-->
+            <label for="login">Login: </label>
+            <!-- Tag de Label -> É responsável por rotular o componente de entrada de dados -->
+            <!-- O atributo de FOR -> Recebe o valor de igual ao atributo ID da entrada de dados --> 
+            <input type="text" id="login" required><br>
+            <!-- Tag de Input -> É responsável por criar o campo -->
+            <!-- O atributo Required -> Força o usuário a escrever no campo -->
+            <label for="senha">Senha: </label>
+            <input type="password" id="senha" required><br>
+            <!-- Input com o TYPE PASSWORD -> Esconde o que o usuário digita -->
+            <input type="submit" value="ENVIAR">
+            <!-- Input TYPE SUBMIT -> Botão de envio de dados ;;; O atributo de Value é o texto que fica dentro dessa caixinha -->
+        </form>
+    </body>
+</html>

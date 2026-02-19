@@ -1,0 +1,52 @@
+.creepster-regular {
+    font-family: "Creepster", system-ui;
+    font-style: normal;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Century Gothic';
+    background-color: rgb(51, 28, 59);
+    color: rgb(218, 173, 218);
+    text-align: center;
+}
+nav {
+    font-size: 20px;
+    padding: 2rem auto;
+}
+section {
+    margin: 3rem 0 6rem 0;
+}
+a {
+    text-decoration: none;
+    color: rgb(218, 173, 218);
+}
+li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 5rem 0 5rem;
+    padding: 1rem 1rem;
+}
+li:hover {
+    box-shadow: 0 0 1rem 5px rgb(115, 77, 122);
+}
+h1 {
+    font-family: 'Creepster';
+    font-size: 5rem;
+    margin: 2rem;
+}
+h2 {
+    font-size: 40px;
+}
+p {
+    font-size: 16px;
+}
+footer {
+    margin: 4rem 0 0 0;
+}
+img {
+    width: 20px;
+    margin: 0 8px 0 0;
+}

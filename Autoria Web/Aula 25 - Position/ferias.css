@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+header, footer {
+    background-color: darkgreen;
+    padding: 2rem;
+    text-align: center;
+    color: aliceblue;
+}
+main section {
+    margin: 2rem;
+}
+div#container{
+    margin: 0 auto;
+    max-width: 70rem;
+}
+header {
+    position: fixed; /* por padrão tudo é static, com fixed ele deixa de ser display block e vira um display in-lineblock - por isso precisa de width */
+    /* e precisa tbm de dois atributos, um de eixo X (left/right) e outro de Y (bottom/top) q bota ele no canto q tu quer. */
+    width: 100vw; /* vw: largura do dispositivo */
+    z-index: 1; /* Recebe um número inteiro que indica a ordem dos elementos (O maior fica na frente)*/
+    top: 0;
+    left: 0;
+}
+main {
+    margin-top: 10rem;
+}
+div.esmaecer {
+    z-index: 2;
+    background-color: rgba(0,0,0,0.7);
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    position: fixed; /* O position cria o eixo Z, permitindo colocar item sob item tlgd, bem blender momento */
+    display: flex; /* display flex */
+    justify-content: center; /* centraliza horizontalmente */
+    align-items: center; /* centraliza verticalmente */
+}
+div.modal{
+    padding: 2rem;
+    background-color: cadetblue;
+    border-radius: 1rem;
+    width: 25rem;
+    height: 25rem;
+}
+section.cards {
+    display: flex;
+    gap: 2rem;
+    position: relative; /* Parece nao mudar nada, mas ele permite tu usar top/left/bottom/right nele tlgd */
+    /* O absolute fica em cima de tudo - usa naquelas parada */
+    top: 0px;
+}
+section.cards p {
+    height: 7rem;
+    padding: 1rem;
+    background-color: chocolate;
+    color: aliceblue;
+}

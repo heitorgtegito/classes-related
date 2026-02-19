@@ -1,0 +1,18 @@
+main {
+    display: flex;
+    /* Não aplica no elemento específico, aplica no container --> Quer organizar as sections = colocar no main pra organizar */
+    /* Se quiser organizar os elementos de dentro de uma section, bota o display: flex nela */
+    flex-wrap: wrap;
+    /* Permite que os itens que estão no container quebrem de linha */
+    justify-content: center;
+    /* define o alinhamento horizontal; SPACE BETWEEN -> Distribui os itens do container uniformemente */
+    gap: 2rem;
+    /* É o espaço entre os itens do container
+    Como tá sendo usado o Display: Flex é melhor usar o gap, aí é isso, substitui pelo gap no container */
+}
+section {
+    border: 1px solid black;
+    padding: 2rem;
+    /* margin: 2rem; --> Não vai mais ter margin no container pq o atributo de gap substitui essa formatação*/
+    width: 20rem;
+}

@@ -1,0 +1,27 @@
+Front-End:
+É a parte do cliente, o lado cliente, ele é o lado mais visual.
+
+Back-End:
+É a parte do servidor, o que não aparece pro cliente/usuário.
+
+HTML(Hypertext Marked Language) é a parte da informação
+CSS é a formatação/ele faz a beleza do site
+JavaScript é o comportamento, ele que liga as partes, registra cliques tlgd.
+
+Parenteses Angulares = <> 
+<strong> bota em negrito
+<h1> fica titulo -- Vai até o h6, cada vez ficando menor e menos chamativo
+<p> paragráfo
+<head> - principal
+<body> - parte do usuário praticamente
+<html> precisa colocar o código inteiro dentro desse dog
+<DOCTYPE html> tem q botar na primeira linha pra funcionar as coisas
+<!-- Comentário --> Assi q faz um comentário em HTML
+
+.html
+.css - CSS tem ordem cuidado
+
+css precisa de ; sempre;
+é bem safe;
+usa a color base como red;
+aí dps seleciona certinho qual a que vc quer;
