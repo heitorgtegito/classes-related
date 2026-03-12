@@ -1,4 +1,4 @@
-# Introdução à Programação Orientada a Objetos
+# Programação Orientada a Objetos
 ### Github
 - Apresentação ao Github
 - Logistíca por trás do Github (Repositório Remoto & Repositório Local)
