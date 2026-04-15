@@ -102,11 +102,11 @@ class Conta_Bancaria:
 
 class Ingresso:
     def __init__(self):
-        self.__sessao = None
-        self.__valores = None
+        self.__dia = None
+        self.__horario = None
         self.__backup = None
-    def sessao():
-        d = int(input("Qual o dia da semana que você deseja? \n1- Segunda-Feira \n2- Terça-Feira \n3- Quarta-Feira \n4-Quinta-Feira \n5-Sexta-Feira \n6- Sábado \n7- Domingo"))
+    def sessao(self):
+        d = int(input("Qual o dia da semana que você deseja? \n1- Segunda-Feira \n2- Terça-Feira \n3- Quarta-Feira \n4- Quinta-Feira \n5- Sexta-Feira \n6- Sábado \n7- Domingo \n"))
         match d:
             case 1: dia = "Segunda-Feira"
             case 2: dia = "Terça-Feira"
@@ -116,14 +116,38 @@ class Ingresso:
             case 6: dia = "Sábado"
             case 7: dia = "Domingo"
             case _ : raise ValueError()
+        self.__dia = dia
         h = input("Qual o horário da sessão? -- Digite no seguinte formato: XX:XX\n")
         h = h.split(":")
         horas = int(h[0])
         minutos = int(h[1])
-        # Transformar esses minutos em decimais pra conseguir checar se o horário tá entre as 17h-00h pra aumentar o preço em 50%. Depois é só ir pros valores e fazer o backup/restauração
-    def valores():
-
-
+        if 0 < minutos >= 60 or 0 < horas >= 24: raise ValueError("Horário Inválido")
+        horario = horas + (minutos/60)
+        self.__horario = f'{horas}:{minutos}'
+        return d, horario
+    def valores(self):
+        infos_sessao = self.sessao()
+        d = infos_sessao[0]
+        horario = infos_sessao[1]
+        self.backup()
+        if d != 3:
+            valor_inteira = 16
+            if d == 5 or d == 6 or d == 7: valor_inteira = 20
+            if 17 <= horario < 24 or horario == 0: valor_inteira += (valor_inteira/2)
+            valor_meia = valor_inteira/2
+            print(f"Os valores para a sessão das {self.__horario} no(a) {self.__dia} são: \nR${valor_inteira} para inteiros \nR${valor_meia} para meias")
+        elif d == 3:
+            valor_inteira = 8
+            print(f"Nas Quartas-Feiras TODOS contam como meias e pagam apenas R${valor_inteira}! \n(A promoção é independente do horário)")
+    def backup(self):
+        if self.__dia == None or self.__horario == None: raise ValueError("Primeiro faça uma sessão")
+        self.__backup = (self.__dia, self.__horario)
+    def recuperar(self):
+        self.__dia = self.__backup[0]
+        self.__horario = self.__backup[1]
+        self.get_sessao()
+    def get_sessao(self):
+        return self.__dia, self.__horario
 
 class UI:
     @staticmethod
@@ -176,7 +200,7 @@ class UI:
         x.def_infos()
         op_cb = -1
         while op_cb != 0:
-            op_cb = int(input("O que você deseja fazer? \n1- Ver minhas informações \n2- Depositar \n3- Sacar \n8- Restaurar minha conta \n9- Redefinir minhas informações \n0- Sair"))
+            op_cb = int(input("\nO que você deseja fazer? \n1- Ver minhas informações \n2- Depositar \n3- Sacar \n8- Restaurar minha conta \n9- Redefinir minhas informações \n0- Sair \n"))
             if op_cb == 1: print(f'Informações da Conta\nNome do titular: {x.get_infos()[0]}\nNúmero da conta: {x.get_infos()[1]}\nSaldo da conta: R${x.get_infos()[2]}')
             if op_cb == 2: x.deposito()
             if op_cb == 3: x.saque()
@@ -186,5 +210,11 @@ class UI:
     @staticmethod
     def ingresso():
         x = Ingresso()
-
+        op_i = -1
+        while op_i != 0:
+            op_i = int(input("O que você deseja fazer? \n1- Definir a sessão e checar seus valores\n2- Recuperar a sessão anterior \n0- Sair \n"))
+            if op_i == 1: x.valores()
+            if op_i == 2: 
+                x.recuperar()
+                print(f'A sessão que você checou anteriormente era no dia {x.get_sessao()[0]} às {x.get_sessao()[1]}\n')
 UI.main()
