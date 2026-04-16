@@ -37,6 +37,8 @@ class Circulo:
         return 2 * 3.14 * self._raio
 
 class Viagem:
+    # Pra viagem como tinha o comando de que precisava de Horas e Minutos eu achei melhor modificar para que o usuário desse 2 inputs diferentes, 
+    # invés de ter que pensar na conversão de minutos pra decimais
     def __init__(self):
         self.__distancia = 0
         self.__tempo = 0
