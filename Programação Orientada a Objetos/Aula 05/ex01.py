@@ -123,7 +123,7 @@ class Ingresso:
         h = h.split(":")
         horas = int(h[0])
         minutos = int(h[1])
-        if 0 < minutos >= 60 or 0 < horas >= 24: raise ValueError("Horário Inválido")
+        if 0 > minutos >= 60 or 0 > horas >= 24: raise ValueError("Horário Inválido")
         horario = horas + (minutos/60)
         self.__horario = f'{horas}:{minutos}'
         return d, horario
