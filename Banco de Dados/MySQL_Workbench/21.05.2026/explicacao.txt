@@ -1,0 +1,4 @@
+Única anotação que é bom deixar é a questão da linha tracejada/contínua no relacionamento.
+
+Tracejada é quando a chave estrangeira está apenas de chave estrangeira
+Contínua é quando a chave estrangeira também vira chave primária
