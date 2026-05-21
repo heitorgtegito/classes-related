@@ -94,12 +94,12 @@ class UI:
             for x in cls.times:
                 print(x)
 
-    @classmethod
-    def procurar_time(cls, id):
-        for x in cls.times:
-            if x.get_id() == id:
-                return x
-        return None
+        @classmethod
+        def procurar_time(cls, id):
+            for x in cls.times:
+                if x.get_id() == id:
+                    return x
+            return None
 
     @classmethod
     def atualizar_time(cls):
