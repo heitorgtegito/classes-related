@@ -1,4 +1,4 @@
-import datetime
+from datetime import datetime
 
 class Paciente:
     def __init__(self, id, nome, cpf, telefone, nascimento):
@@ -24,13 +24,13 @@ class Paciente:
         else: self.__telefone = telefone
     def get_telefone(self): return self.__telefone
     def set_nascimento(self, nascimento):
-        if nascimento < datetime.now(): raise ValueError()
+        if nascimento > datetime.now(): raise ValueError()
         else: self.__nascimento = nascimento
     def get_nascimento(self): return self.__nascimento
     def __str__(self):
         return f"{self.__id} - {self.__nome} - {self.__cpf} - {self.__telefone} - {self.__nascimento.strftime("%d/%m/%Y")}"
     def idade(self):
-        tempo = datetime.now() - self.__nascimnento
+        tempo = datetime.now() - self.__nascimento
         anos = tempo.days // 365
         meses = tempo.days % 365 // 30
         return f"Idade: {anos} ano(s) e {meses} mes(es)"
@@ -39,7 +39,7 @@ class PacienteUI:
     __pacientes = []
     
     @staticmethod
-    def Main():
+    def main():
         op = 0
         while op != 7:
             op = PacienteUI.menu()
@@ -51,7 +51,7 @@ class PacienteUI:
             if op == 6: PacienteUI.aniversariantes()
 
     @staticmethod
-    def Menu():
+    def menu():
         print("1-Inserir \n2-Listar \n3-Atualizar \n4-Excluir \n5-Pesquisar \n6-Aniversariantes \n7-Sair")
         return int(input("Escolha uma opção: "))
     
@@ -69,7 +69,7 @@ class PacienteUI:
     def listar(cls):
         if len(cls.__pacientes) == 0: print("Nenhum paciente cadastrado")
         else: 
-            for x in cls.__pacientes: return x
+            for x in cls.__pacientes: print(x)
     
     @classmethod
     def atualizar(cls):
@@ -84,6 +84,7 @@ class PacienteUI:
             nascimento = datetime.strptime(input("Novo telefone: "), "%d/%m/%Y")
             novo = Paciente(id, nome, cpf, telefone, nascimento)
             cls.__pacientes.append(novo)
+        else: raise NameError()
     
     @classmethod
     def excluir(cls):
@@ -94,12 +95,19 @@ class PacienteUI:
 
     @classmethod
     def pesquisar(cls):
-        nome = input("Informe as iniciais do nome: ")
-        nome.split()
-        iniciais = ""
-        for i in nome:
-            iniciais += f"{nome[i]}"
-        for x in cls.__pacientes:
-            if x.get_nome().startswith(nome) == True: return x
-        return None
+        if len(cls.__pacientes) == 0: print("Nenhum paciente cadastrado")
+        else:
+            nome = input("Informe as iniciais do nome: ")
+            for i in cls.__pacientes:
+                if i.get_nome().startswith(nome):
+                    print(i)
     
+    @classmethod
+    def aniversariantes(cls):
+        if len(cls.__pacientes) == 0: print("Nenhum paciente cadastrado")
+        mes = int(input("Informe o mês que deseja verificar os aniversariantes: "))
+        for i in cls.__pacientes:
+            if i.get_nascimento().month() == mes:
+                print(i)
+                
+PacienteUI.main()
