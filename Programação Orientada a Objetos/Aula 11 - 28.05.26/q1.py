@@ -1,6 +1,6 @@
 # Boleto
 from enum import Enum
-from datetime import datetime, timedelta
+from datetime import datetime
 class Boleto: # Aqui algumas coisas não vão ter dados iniciais, até pq ngm recebe um boleto já pago.
     def __init__(self, codBarras, dataEmissao, dataVencimento, valorBoleto):
         self.set_codBarras(codBarras)
@@ -27,7 +27,7 @@ class Boleto: # Aqui algumas coisas não vão ter dados iniciais, até pq ngm re
     def get_dataVencimento(self): return self.__dataVencimento
 
     def set_valorBoleto(self, valorBoleto):
-        if valorBoleto > 0: raise ValueError()
+        if valorBoleto <= 0: raise ValueError()
         else: self.__valorBoleto = valorBoleto
     def get_valorBoleto(self): return self.__valorBoleto
     def get_valorPago(self): return self.__valorPago
@@ -43,7 +43,7 @@ class Boleto: # Aqui algumas coisas não vão ter dados iniciais, até pq ngm re
     def situacao(self): return self.__situacaoPagamento
 
     def __str__(self):
-        return f"Boleto: {self.__codBarras} - Emissão: {self.__dataEmissao.strftime('%d/%m/%Y')} - Data de Vencimento {self.__dataVencimento.strftime('%d/%m/%Y')} - Valor: R${self.__valorBoleto:.2f} - Data de Pagamento: {self.__dataPagto.strftime('%d/%m/%Y')} - Valor Pago: R${self.__valorPago:.2f} - Situação: {self.__situacaoPagamento}"
+        return f"Boleto: {self.__codBarras} - Emissão: {self.__dataEmissao} - Data de Vencimento {self.__dataVencimento} - Valor: R${self.__valorBoleto:.2f} - Data de Pagamento: {self.__dataPagto} - Valor Pago: R${self.__valorPago:.2f} - Situação: {self.__situacaoPagamento}"
 
 
 class Pagamento(Enum):
@@ -57,6 +57,7 @@ class BoletoUI:
     def main():
         op = 0
         while op != 10:
+            op = BoletoUI.menu()
             if op == 1: BoletoUI.inserir()
             if op == 2: BoletoUI.listar()
             if op == 3: BoletoUI.atualizar()
@@ -78,16 +79,17 @@ class BoletoUI:
         dataEmissao = datetime.strptime(input("Informe a data de emissão: "), "%d/%m/%Y")
         dataVencimento = datetime.strptime(input("Informe a data de vencimento: "), "%d/%m/%Y")
         valorBoleto = float(input("Digite o valor do boleto: "))
-        Boleto(codBarras, dataEmissao, dataVencimento, valorBoleto)
+        cls.__boletos.append(Boleto(codBarras, dataEmissao, dataVencimento, valorBoleto))
 
+    @classmethod
     def listar(cls):
         if len(cls.__boletos) == 0: print("Não há boletos")
-        for i in cls.__boletos: print(i)
+        for i in cls.__boletos: cls.__boletos.remove(i)
 
     @classmethod
     def atualizar(cls):
         cls.listar()
-        codBarras = input("Informe o codBarras: ")
+        codBarras = input("Informe o código de barras: ")
         for i in cls.__boletos:
             if i.get_codBarras() == codBarras:
                 cls.__boletos.remove(i)
@@ -101,31 +103,36 @@ class BoletoUI:
     @classmethod
     def excluir(cls):
         cls.listar()
-        codBarras = int(input("Informe o código de barras: "))
+        codBarras = input("Informe o código de barras: ")
         for i in cls.__boletos:
-            if i.get_codBarras() == codBarras: cls.__boletos.remove(i)
+            if i.get_codBarras() == codBarras: print("HAHAHA")
 
     @classmethod
     def boletos_em_aberto(cls):
         for i in cls.__boletos:
             if i.situacao() == Pagamento.EM_ABERTO: print(i)
 
+    @classmethod
     def boletos_pagos(cls):
         for i in cls.__boletos:
             if i.situacao() == Pagamento.PAGO or i.situacao() == Pagamento.PAGO_PARCIAL: print(i)
 
+    @classmethod
     def boletos_a_vencer(cls):
         for i in cls.__boletos:
             if i.situacao() == Pagamento.EM_ABERTO and i.dataVencimento > datetime.now(): print(i)
 
+    @classmethod
     def boletos_vencidos(cls):
         for i in cls.__boletos:
             if i.situacao() == Pagamento.EM_ABERTO and i.dataVencimento <= datetime.now(): print(i)
 
+    @classmethod
     def pagar_boleto(cls):
         codBarras = input("Digite o código de barras: ")
         for i in cls.__boletos:
             if i.get_codBarras() == codBarras:
                 valor = int(input("Digite o valor que será pago do boleto: "))
                 i.pagar(valor)
+
 BoletoUI.main()
