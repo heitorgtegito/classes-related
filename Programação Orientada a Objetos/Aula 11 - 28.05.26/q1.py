@@ -34,7 +34,7 @@ class Boleto: # Aqui algumas coisas não vão ter dados iniciais, até pq ngm re
     def get_dataPagto(self): return self.__dataPagto
 
     def pagar(self, valor_pago):
-        if valor_pago < 0: raise ValueError()
+        if valor_pago < 0 or valor_pago > self.__valorBoleto: raise ValueError()
         if self.__situacaoPagamento != Pagamento.EM_ABERTO: raise ValueError()
         self.__valorPago = valor_pago
         self.__dataPagto = datetime.now()
