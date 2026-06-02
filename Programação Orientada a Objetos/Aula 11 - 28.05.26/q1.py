@@ -132,7 +132,7 @@ class BoletoUI:
         codBarras = input("Digite o código de barras: ")
         for i in cls.__boletos:
             if i.get_codBarras() == codBarras:
-                valor = int(input("Digite o valor que será pago do boleto: "))
+                valor = float(input("Digite o valor que será pago do boleto: "))
                 i.pagar(valor)
 
 BoletoUI.main()
