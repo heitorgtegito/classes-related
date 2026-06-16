@@ -84,7 +84,7 @@ class BoletoUI:
     @classmethod
     def listar(cls):
         if len(cls.__boletos) == 0: print("Não há boletos")
-        for i in cls.__boletos: cls.__boletos.remove(i)
+        for i in cls.__boletos: print(i)
 
     @classmethod
     def atualizar(cls):
