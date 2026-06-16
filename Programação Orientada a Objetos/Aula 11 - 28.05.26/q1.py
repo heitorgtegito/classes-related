@@ -105,7 +105,7 @@ class BoletoUI:
         cls.listar()
         codBarras = input("Informe o código de barras: ")
         for i in cls.__boletos:
-            if i.get_codBarras() == codBarras: print("HAHAHA")
+            if i.get_codBarras() == codBarras: cls.__boletos.remove(i)
 
     @classmethod
     def boletos_em_aberto(cls):
