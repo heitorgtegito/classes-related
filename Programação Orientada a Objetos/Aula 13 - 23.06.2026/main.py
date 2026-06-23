@@ -96,20 +96,20 @@ class ClienteUI:
 
     @classmethod
     def salvar(cls):
-        lista = []
-        for i in cls.__objetos:
-            lista.append(i)
         arquivo = open("clientes.json", mode="w")
-        json.dump(lista, arquivo, default = Cliente.to_json, indent= 2)
+        json.dump(cls.__objetos, arquivo, default = Cliente.to_json, indent= 2)
         arquivo.close()
+        print("Dados salvos")
 
     def abrir():
-        arquivo = open("clientes.json", mode="r")
-        list_dict = json.load(arquivo)
-        arquivo.close()
-        for i in list_dict: 
-            x = Cliente.from_json(i)
-            print(x)
-
+        try:
+            arquivo = open("clientes.json", mode="r")
+            list_dict = json.load(arquivo)
+            arquivo.close()
+            for i in list_dict: 
+                x = Cliente.from_json(i)
+                print(x)
+        except FileNotFoundError:
+            pass
 
 ClienteUI.main()
