@@ -1,0 +1,18 @@
+from models.cliente import Cliente
+from models.clientedao import ClienteDAO
+class Service:
+    @staticmethod
+    def cliente_inserir(id, nome, email, telefone):
+        obj = Cliente(id, nome, email, telefone)
+        ClienteDAO().inserir(obj)
+    @staticmethod
+    def cliente_listar(): return ClienteDAO().listar()
+    @staticmethod
+    def cliente_listar_id(id): return ClienteDAO().listar_id(id)
+    @staticmethod
+    def cliente_atualizar(id, nome, email, telefone):
+        obj = Cliente(id, nome, email, telefone)
+        ClienteDAO().atualizar(obj)
+    @staticmethod
+    def cliente_excluir(id):
+        ClienteDAO().excluir(id)
