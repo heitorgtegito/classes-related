@@ -14,4 +14,4 @@ The content is organized into folders, one for each technical subject.
 - Análise e Projeto Orientada a Objetos:
   - The subject makes an introduction into Software Engineering and how to analyze and create a project to solve a problem.
 - Banco de Dados:
-  - Subject thaught me the basic of Databases
+  - Subject thaught me the basic of Databases.
