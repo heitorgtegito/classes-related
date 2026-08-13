@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: "Century Gothic";
+    font-size: 1.3rem;
+    background-color: cornsilk;
+}
+header, footer {
+    background-color: 	#de060612;
+    text-align: center;
+    padding: 2rem;
+
+}
+main {
+    max-width: 70rem;
+    display: flex;
+    margin: 2rem auto;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 6%;
+
+}
+main section {
+    width: 28rem;
+    margin: 2rem 0;
+    border: 3px dashed rgba(0, 0, 0, 0.493);
+    padding: 2rem;
+    border-radius: 1rem;
+}
+main section h2 {
+    padding: 0.6rem 0;
+}
+nav ol {
+    display: flex;
+    gap: 3%;
+    justify-content: center ;
+}
+nav ol li {
+    list-style-type: none;
+}
+nav ol li a {
+    background-color: #3f3f3f1c;
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    display: inline-block;
+}
+nav ol li a:hover{
+    background-color: #3f3f3f2c;
+}
+header a {
+    color: black;
+    text-decoration: none;
+}
+header h1 {
+    margin: 0 0 1.5rem 0;
+}

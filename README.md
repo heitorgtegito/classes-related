@@ -15,3 +15,5 @@ The content is organized into folders, one for each technical subject.
   - The subject makes an introduction into Software Engineering and how to analyze and create a project to solve a problem.
 - Banco de Dados:
   - Subject thaught me the basic of Databases.
+- Design Web:
+  - Is the 2nd part of the Autoria Web subject.
