@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+    <html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CADASTRO DE ESTÁGIO</title>
+        <link rel="stylesheet" href="main.css">
+    </head>
+    <body>
+        <h1>DIRETORIA DE EXTENSÃO - DIREX</h1>
+        <h2>CADASTRO PARA ESTÁGIO</h2>
+        <form action="resposta.html" method="get"> <!-- método get: dados expostos na url, método post: dados ocultos :) -->
+
+            <label for="nome">Nome:</label>
+            <!-- Label representa o rótulo do campo do formulário ; A marcação de label precisa ficar relacionada com o componente de entrada de dados,
+             o componente, ex.: input, pode ficar dentro da marcação ou relacionada com o atributo for da label e id desse componente. -->
+            <input type="text" id="nome" name="nome" value="Matheus Medeiros"><br>
+            <!-- O atributo value é usado para 'editar dados' de um formulário  -->
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" placeholder="Digite o seu e-mail aqui..."><br>
+            <!-- Placeholder é o classico né, aparece inicialmente e dps q vc digita a primeira coisa, ele some -->
+
+            <label for="nascimento">Data de Nascimento:</label>
+            <input type="date" id="nascimento" disabled> <br>
+            <!-- Disabled é um comando para desativar o campo ; A ideia é usar o javascript e tals pra tirar o disabled ou botar tlgd -->
+            
+            <label for="curriculo">Currículo</label>
+            <input type="file" id="curriculo" required> <br>
+            <!-- Requiered é um comando tipo o disabled, que torna o campo obrigatório -->
+            
+            <label for="senha">Senha</label>
+            <input type="password" id="senha" maxlength="7" minlength="3"> <br>
+            <!-- Password oculta o bagulhinho, maxlenght e minlength determinam o tamanho das coisa tlgd -->
+
+            <label for="uf">Estado:</label>
+            <!-- select é chamado de combobox -->
+             <select name="uf" id="uf" multiple>
+                <!-- o componente select é usado para grupo de itens muito similares, o comando 'multiple' permite selecionar vários itens -->
+                <option value="rn" selected>Rio Grande do Norte</option>
+                <!-- o comando 'selected' serve para deixar uma opção previamente marcada -->
+                <option value="pe">Pernambuco</option>
+                <option value="rj">Rio de Janeiro</option>
+                <option value="pb">Paraíba</option>
+             </select> <br>
+
+            <input type="submit" value="ENVIAR">
+        </form>
+    </body>
+</html>

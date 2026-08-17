@@ -1,0 +1,17 @@
+body {
+    background-color: rgb(238, 255, 255);
+    font-family: "Century Gothic";
+}
+label {
+    display: inline-block;
+    width: 6rem;
+    text-align: center;
+    padding: 0.2rem;
+    margin: 0.5rem;
+    background-color: rgba(255, 235, 205, 0.356);
+}
+input[type='submit']{
+    background-color: rgba(0, 0, 0, 0.397);
+    padding: 1rem;
+    color: rgba(255, 253, 253, 0.699);
+}
