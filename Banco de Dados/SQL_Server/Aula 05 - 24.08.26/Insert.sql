@@ -1,0 +1,23 @@
+INSERT INTO Departamento (nome, nome_diretor, ramal) VALUES('Heitor', 'Matheus', 24)
+INSERT INTO Departamento (nome, nome_diretor, ramal) VALUES('Lian', 'JotaA', 21)
+INSERT INTO Departamento (nome, nome_diretor, ramal) VALUES('Gilbas', 'Davi', 22)
+INSERT INTO Departamento (nome, nome_diretor, ramal) VALUES('Arthur', 'Maria', 23)
+INSERT INTO Departamento (nome, nome_diretor, ramal) VALUES('Thiago', 'Ricardo', 24)
+
+INSERT INTO UF (sigla, nome, populacao) VALUES('RN', 'Natal', 123456)
+INSERT INTO UF (sigla, nome, populacao) VALUES('CE', 'Fortaleza', 223456)
+INSERT INTO UF (sigla, nome, populacao) VALUES('SP', 'São Paulo', 323456)
+INSERT INTO UF (sigla, nome, populacao) VALUES('RJ', 'Rio de Janeiro', 423456)
+INSERT INTO UF (sigla, nome, populacao) VALUES('MG', 'Belo Horizonte', 523456)
+
+INSERT INTO Produto (descricao, valor_unitario, quantidade_estoque) VALUES('Sapato', 120.90, 10)
+INSERT INTO Produto (descricao, valor_unitario, quantidade_estoque) VALUES('Camisa', 249.89, 12)
+INSERT INTO Produto (descricao, valor_unitario, quantidade_estoque) VALUES('Terno', 499.10, 4)
+INSERT INTO Produto (descricao, valor_unitario, quantidade_estoque) VALUES('Calção', 21.33, 8)
+INSERT INTO Produto (descricao, valor_unitario, quantidade_estoque) VALUES('Calça', 199.99, 6)
+
+INSERT INTO Aluno (nome, telefones, idade, data_nascimento) VALUES('Heitor', '84 99999-9999', 16, '2009-11-27')
+INSERT INTO Aluno (nome, telefones, idade, data_nascimento) VALUES('Lian', '84 88888-8888', 16, '2005-08-19')
+INSERT INTO Aluno (nome, telefones, idade, data_nascimento) VALUES('Cossito', '84 77777-7777', 16, '2006-06-05')
+INSERT INTO Aluno (nome, telefones, idade, data_nascimento) VALUES('João', '84 66666-6666', 16, '2006-05-15')
+INSERT INTO Aluno (nome, telefones, idade, data_nascimento) VALUES('Arthur', '84 55555-5555', 16, '2005-02-26')
