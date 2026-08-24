@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JAVASCRIPT</title>
+
+        <script>
+            /* 
+            - javascript é uma linguagem de programação que funciona no lado cliente e servidor
+            - js nao é java, java é uma linguagem backend de alto nível, fortemente tipada e case sensitive
+            (fortemente tipada - significa que, por exemplo, uma variável definida como int não pode mudar pra str)
+            (case sensitive - document != Document - sensível a caixa alta)
+            - usada para criar comportamentos no desenvolvimento web
+            - pode ser usado com FRAMEWORKS
+            
+            */
+
+        </script>
+    </head>
+    <body>
+        <script>
+            window.alert('Olá Mundo!!');
+            /*Comentário para várias linhas*/
+            // Comentário para uma linha
+            // Window é um objeto, Alert é um método
+            let dia = window.confirm("Como foi o fim de semana?")
+            // let dia é uma definição de variável
+            window.alert(dia)
+            let cor = window.prompt("Qual sua cor favorita?")
+
+        </script>
+        <p id="curso">INFOWEB</p>
+        <script>
+            document.getElementById('curso').style.color = cor;
+            // document é um objeto, getElementById é um método
+            // style e color são propriedades
+            // a marcação c id precisa estar antes do método
+            // DOM - modelo de objeto do documento
+            document.write('HOJE TEM ABERTURA!!!')
+            document.getElementById('curso').innerHTML = "INFOWEB 2025"
+            // propriedade innerHTML dentro de uma marcação com ID
+
+            /* variaveis */
+
+            let num = 3
+            let float = 5.8
+            let primeironome = 'José'
+            let boo = true
+
+            // é possível criar variáveis usando 'let'
+            // let permite mudar o valor da variável depois
+            // const - não permite mudar o valor depois
+
+            console.log(num+float)
+        </script>
+</body>
+</html>
