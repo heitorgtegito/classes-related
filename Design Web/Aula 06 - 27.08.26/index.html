@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JAVASCRIPT</title>
+    </head>
+    <body>
+        <script>
+            // alert('janela')
+            // confirm('pergunta com true ou false')
+            // prompt('pergunta subjetiva')
+            document.write("possibilidades de escrever no html -- não é elegante") // não é a melhor coisa pq não dá pra mudar c tag tlgd
+            // dá pra colocaro  conteúdo usando um getElementByID tlgd
+            // Operadores aritméticos
+            console.log(54+98); // é uma estratégia escondida para fazer testes
+            // deve ser acessado usando a aba 'console' do inspecionar do navegador
+            console.log(87-98);
+            console.log(2*89);
+            console.log(63/9);
+            let a = 8
+            
+            console.log("VALOR de 'a' ")
+            console.log(a)
+            console.log("COMANDO a++ ") // igual a fazer um a+=1
+            console.log(a++); // Incrementa dps de escrever
+            console.log("VALOR de 'a' ") // Pode usar aspas simples dentro de duplas
+            console.log(a)
+            console.log("COMANDO ++a") 
+            console.log(++a) // Incrementa antes de escrever
+            console.log(a)
+
+            console.log(--a);
+            console.log(a--)
+
+            // Operadores Relacionais
+            console.log(4==6);
+            console.log(4!=9);
+            console.log(9>7);
+            console.log(6<6);
+            console.log(4==7 && 8==9); // ambas verdadeiras - retorna V (tipo um and)
+            console.log(4==8 || 0==0); // se alguma verdadeira - retorna V (tipo um or)
+            
+            console.log(8==='8'); // se idênticos, inclusive no TIPO (int === str)
+            console.log(8=='8') // ignora se o tipo é igual
+        </script>
+        <h2>Estrutura Condicional</h2>
+        <script>
+            let lanche = 'bolo'
+            if(lanche == 'bolo'){
+                console.log("OPA! BOLO!!")
+            }else{
+                console.log("Hoje não é bolo =( ");
+            }
+            /* IF's aninhados */
+            if(lanche == 'cuscuz'){
+                console.log('Cuscuz hoje!')
+            }else{
+                if(lanche == "bolacha"){
+                    console.log("Bolacha!")
+                }
+            }
+            // switch
+            let opcao = 2
+            switch(opcao){
+                case 1: console.log("O valor é 1"); break;
+                case 2: console.log("O valor é 2"); break;
+                case 3: console.log("O valor é 3"); break;
+                default: console.log("DEFAULT")
+            }
+            let modalidade = "futebol"
+            switch(modalidade){
+                case "basequete":{
+                    console.log("O valor é basequete"); break;
+                } // caso tenha várias linhas, precisa das chaves
+                // o break é pra parar o switch, aí ele não analisa as prox opções
+                case "handebol": console.log("O valor é handebol"); break;
+                case "futebol": console.log("O valor é futebol"); break;
+                default: console.log("DEFAULT")
+            }
+        </script>
+        <button id="incrementar">INCREMENTAR</button>
+        <!-- button é similar ao input-submit, mas o submit é uma marcação de formulário, o button é mais pra interatividade c js -->
+        <span id="resultado">0</span>
+        <!-- span é uma marcação sem valor semântico mas do tipo inline (tipo o div sendo q inline) -->
+        <script>
+            const incrementar = document.getElementById("incrementar");
+            // const é uma possibilidade de criação de variável q nao muda o valor
+            incrementar.addEventListener('click', function(e){
+                // evento clique é chamado ao clicar no botao 'incrementar'
+                // alert("CLICOU")
+                let resultado = document.getElementById("resultado")
+                resultado.innerHTML = parseInt(resultado.textContent) +1 // innerHTML é um método pra inserir html ou texto
+                // parseINT converte pra inteiro
+            })
+        </script>
+        <button id="decrementar">DECREMENTAR</button>
+        <script>
+            const decrementar = document.getElementById("decrementar")
+            decrementar.addEventListener('click', function(e){
+                let resultado = document.getElementById("resultado")
+                resultado.innerHTML = parseInt(resultado.textContent) -1
+            })
+        </script>
+    </body>
+</html>
