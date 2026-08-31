@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>aula7-arrays-math</title>
+    </head>
+    <body>
+        <h1>ARRAYS e MATH</h1>
+        <h2>Arrays</h2>
+        <script>
+            //Array é uma lista de itens
+            //criação
+            const nums = [4,7,8,9]
+            const alunos = ["José", "Arthur", "Isabella", "Isadora", "Raquel", "Alisson", "Emanuel", "Matheus", "Heitor", "Iuri"]
+
+            const frutas = []
+            frutas[0] = "Maçã"
+            frutas[1] = "Pera"
+            frutas[2] = "Uva"
+
+            const lanche = new Array("Biscoito", "Bolo", "Macarrão")
+        </script>
+
+        <p id="resultado"></p>
+        <p id="resultado1"></p>
+        <p id="resultado2"></p>
+        <p id="resultado3"></p>
+        <p id="resultado4"></p>
+        <p id="resultado5"></p>
+        <p id="resultado6"></p>
+        <p id="resultado7"></p>
+        <p id="resultado8"></p>
+        <p id="resultado9"></p>
+        <p id="resultado10"></p>
+        <p id="resultado11"></p>
+        <p id="resultado12"></p>
+        <p id="resultado13"></p>
+        <p id="resultado14"></p>
+        <p id="resultado15"></p>
+        <p id="resultado16"></p>
+
+        <script>
+            let resultado = document.getElementById("resultado")
+            let resultado1 = document.getElementById("resultado1")
+            let resultado2 = document.getElementById("resultado2")
+            let resultado3 = document.getElementById("resultado3")
+            let resultado4 = document.getElementById("resultado4")
+            let resultado5 = document.getElementById("resultado5")
+            let resultado6 = document.getElementById("resultado6")
+            let resultado7 = document.getElementById("resultado7")
+            let resultado8 = document.getElementById("resultado8")
+            let resultado9 = document.getElementById("resultado9")
+            let resultado10 = document.getElementById("resultado10")
+
+            // acessar um valor passando um índice (sexta posição: 0 1 2 3 4 ->5<-)
+            resultado.innerHTML = alunos[5]
+            
+            // imprimir a lista em formato de texto
+            resultado1.innerHTML = alunos.toString()
+            // gera uma lista em formato JSON
+            resultado2.innerHTML = JSON.stringify(alunos)
+            
+            // número total de itens da lista
+            resultado3.innerHTML = alunos.length
+            
+            // retorna o penúltimo número
+            resultado4.innerHTML = alunos[alunos.length-1]
+            
+            // ordenação
+            resultado5.innerHTML = alunos.sort()
+            
+            // adicionar valores
+            resultado6.innerHTML = alunos.push("Isis") // retorna o comprimento
+            resultado7.innerHTML = alunos.toString()
+
+            // remover pop
+            resultado8.innerHTML = alunos.pop() // retorna o valor do item removido
+            resultado9.innerHTML = alunos.toString() // retorna o valor do item removido
+
+            // separador para os itens
+            resultado10.innerHTML = alunos.join(" - ")
+
+        </script>
+
+        <h2>MATH</h2>
+        <p id="mathresultado"></p>
+        <p id="mathresultado1"></p>
+        <p id="mathresultado2"></p>
+        <p id="mathresultado3"></p>
+        <p id="mathresultado4"></p>
+        <p id="mathresultado5"></p>
+        <p id="mathresultado6"></p>
+        <script>
+            let mathresultado = document.getElementById("mathresultado")
+            let mathresultado1 = document.getElementById("mathresultado1")
+            let mathresultado2 = document.getElementById("mathresultado2")
+            let mathresultado3 = document.getElementById("mathresultado3")
+            let mathresultado4 = document.getElementById("mathresultado4")
+            let mathresultado5 = document.getElementById("mathresultado5")
+            let mathresultado6 = document.getElementById("mathresultado6")
+            // Arredonda para o mais próximo
+            mathresultado.innerHTML = "Arredonda o valor 'round': " +Math.round(5.3)
+            // Arredonda para cima -> 
+            mathresultado1.innerHTML = Math.ceil(5.4)
+            // Arredonda para baixo -> 
+            mathresultado2.innerHTML = Math.floor(5.7)
+
+            mathresultado3.innerHTML = Math.min(4,8,7,5,6,3,2) // menor valor
+            mathresultado4.innerHTML = Math.max(4,8,7,5,6,3,2) // maior valor
+
+            // número randômico
+            mathresultado5.innerHTML = Math.random()
+
+            // número randômico entre 0 e 10
+            mathresultado6.innerHTML = Math.floor(Math.random()*10)
+        </script>
+        <label>
+            Nome: <input type="text" id="nome"> <br>
+            <button id="gerar">GERAR</button>
+            <p id="textoformatado"></p>
+        </label>
+        <script>
+            const cores = ["black", "slateblue", "navy", "steelblue", "teal", "springgreen", "lime", "goldenrod", "tan", "indigo", "magenta", "deeppink", "indianred", "red", "yellow"]
+            let gerar = document.querySelector('#gerar')
+            // QuerySelector é tipo o getElementById, 
+            // a diferença é que aceita marcações com 'class', se for uma class, usa ".valorclass"
+            gerar.addEventListener("click", function(e) {
+                let nome = document.querySelector("#nome").value
+                document.querySelector("#textoformatado").style.color = cores[Math.floor(Math.random()*10)]
+                document.querySelector("#textoformatado").innerHTML = nome
+            })
+        </script>
+    </body>
+</html>
