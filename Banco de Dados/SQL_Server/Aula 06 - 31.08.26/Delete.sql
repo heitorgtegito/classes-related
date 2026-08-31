@@ -1,0 +1,2 @@
+Delete Contato
+Delete Categoria
