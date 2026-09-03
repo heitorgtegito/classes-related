@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ESTRUTURAS DE REPETIÇÃO</title>
+    </head>
+    <body>
+        <h1>ESTRUTURAS DE REPETIÇÃO</h1>
+        <p id="texto"></p>
+        <ol id="listadealunos"></ol>
+        <script>
+            const alunos = ['Carlos', 'Alcides', 'Bianca', 'Danúbia']
+            // variável de lista alunos
+            document.getElementById('texto').innerHTML = alunos.sort().join(" - ")
+            // imprimir chamando 2 métodos para lista: sort que é para ordenar e joing (insere um caracter entre os elementos da lista)
+
+            // for
+            for(let i=0; i<10; i++){
+                // A estrutura de repetição 'for' recebe 3 parâmetros:
+                /*
+                O primeiro é a declaração/início
+                O segundo é o teste lógico
+                O terceiro é o incremento*/
+                console.log(i)
+            }
+            for(let i=0; i<10; i+=2){
+                console.log("Incremento de 2 em 2: "+i+"\n")
+            }
+            // '\n' é tipo um br para o console log
+            // '+' concattttena a string (valor estático) com a variável
+            for(let i=10; i>0; i--){
+                console.log("Decremento: "+i+"\n")
+            }
+            // foreach
+            alunos.forEach(item => {
+                // foreach é opção prática para imprimir os valores de uma lista
+                // não é necessário incrementar e nem fazer teste lógico com o comprimento de lista
+                // 'item' é uma variável criada internamente para representar cada item da lista
+                console.log(item)
+            })
+            for(let i=0; i<alunos.length; i++){
+                console.log(alunos[i])
+                document.getElementById("listadealunos").innerHTML += "<li>"+alunos[i]+"</li>"
+                document.getElementById("listadealunos").innerHTML += `<li>${alunos[i]}</li>`
+                // 2 possibilidades de mostrar o valor
+                // '+=' pega o valor já impresso e coloca um novo
+            }
+            // while
+            let i = 0
+            while(i<20){
+                console.log(i++)
+            }
+            // NÃO ESQUECER O INCREMENTO
+        </script>
+        <h2>EXEMPLOS</h2>
+        <p id="resultado"></p>
+        <script>
+            // exemplos: mostrar o termo INFOWEB
+            const resultado = document.getElementById("resultado")
+            for(let i=0; i<5; i++){
+                resultado.innerHTML += `<span style='font-size:${i}rem'>INFOWEB</span><br>`
+            }
+        </script>
+        <button id="mudarbg">MUDAR BG</button>
+        <script>
+            const mudarbg = document.getElementById("mudarbg")
+            mudarbg.addEventListener("click", function(e){
+                document.body.style.backgroundColor = "blue"
+            })
+        // na linha 63 eu usei o CSS como parte do HTML (style) e na linha 69 eu usei o CSS como JavaScript (document.body.style)
+        </script>
+    </body> 
+</html>
