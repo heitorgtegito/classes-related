@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>String e Data</title>
+    </head>
+    <body>
+        <script>
+            // estruturas de repetição
+            for(let i=0; i<=10 ; i++){
+                console.log(i)
+            }
+        </script>
+        <h1>String e Data</h1>
+        <h2>String</h2>
+
+        <script>
+            let nome = 'INFOWEB';
+            console.log("Comprimento da String: "+nome.length)
+            console.log("Posição do caracter da string: "+nome.charAt(3))
+            console.log("Substitui a string: "+nome.replace('INFO', 'Informática para '))
+            console.log("Fatia a string: "+nome.slice(2,4))
+            // slice tem 2 parâmetros: posição inicial e posição final (não é impressa)
+            console.log("Coloca em minúsculas: "+nome.toLowerCase())
+            console.log("Coloca em maiúsculas: "+"ifrn".toUpperCase())
+            console.log("Concatena strings: "+nome.concat(" IFRN"))
+        </script>
+        <h2>EXEMPLO</h2>
+        <p id="resultado"></p>
+        <script>
+            let nome2 = 'DESIGN WEB';
+            for(let i=0; i<=nome2.length ; i++){
+                document.getElementById('resultado').innerHTML += 
+                '<span style=font-size:'+(i+1)+'rem>'+nome2.charAt(i)+'</span>'
+            }
+        </script>
+        <h2>DATA</h2>
+        <p id="data"></p>
+        <p id="hora"></p>
+        <p id="segundos"></p>
+        <script>
+            const data = new Date()
+            // data baseada na data que está no computador do usuário
+            console.log("Dia de hoje: "+data.getDate())
+            console.log("Mês de hoje: "+data.getMonth()) //o mês começa com 0
+            console.log("Ano de hoje: "+data.getFullYear())
+
+            document.getElementById('data').innerHTML = data.getDate()+'/'+'0'+(data.getMonth()+1)+'/'+data.getFullYear()
+
+            console.log("Hora: "+data.getHours())
+            console.log("Minutos: "+data.getMinutes())
+            console.log("Segundos: "+data.getSeconds())
+
+
+            document.getElementById('hora').innerHTML = data.getHours()+':'+data.getMinutes()+':'+data.getSeconds()
+            
+            function segundos(){
+                const segundos = new Date()
+                document.getElementById('segundos').innerHTML = '<span style=font-size:'+segundos.getSeconds()+'px>'+segundos.getSeconds()+'</span>'
+            }
+            setInterval(segundos, 500)
+
+
+        </script>
+
+
+    </body>
+</html>
