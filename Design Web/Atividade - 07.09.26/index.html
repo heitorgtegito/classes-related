@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Atividade 7set</title>
+    </head>
+    <body>
+        <!-- Listar os números de -10 A 10 -->
+        <script>
+            for(let i = -10; i<=10; i++){
+                console.log(i)
+            }
+        </script>
+
+        <!-- Fazer um array com nomes de cores (7) e imprimir o seu nome (7 vezes) com as cores que estão no array -->
+        <p id="resultado"></p>
+        <script>
+            const cores = ["blue", "red", "green", "violet", "yellow", "orange", "pink"]
+            cores.forEach(item => {
+                document.getElementById("resultado").innerHTML += '<span style=color:'+item+'>Heitor Egito</span> <br>'
+            })
+        </script>
+
+        <!-- Imprimir os números de 1 a 5 com tamanhos de texto diferentes -->
+        <p id="tamanhos"></p>
+        <script>
+            for(let i=1; i<=5; i++){
+                document.getElementById("tamanhos").innerHTML += '<span style=font-size:'+Math.ceil(Math.random()*10)+'rem'+'>'+i+'</span> <br>'
+            }
+        </script>
+
+        <!-- Fazer um formulário pedindo um nome e ao clicar no botão mostrar esse nome impresso 5 vezes, onde cada vez terá um tamanho de 1rem até 5rem -->
+        <form>
+            <label>
+                Nome: <input type="text" id="nome"> <br>
+                <button id="imprimir" type="button">IMPRIMIR</button>
+                <p id="cincovezes"></p>
+            </label>
+        </form>
+        <script>
+            let imprimir = document.querySelector("#imprimir")
+            imprimir.addEventListener("click", function(e) {
+                let nome = document.querySelector("#nome").value
+                document.querySelector("#cincovezes").innerHTML = ""
+                for(let i=1; i<=5; i++){
+                    document.querySelector("#cincovezes").innerHTML += '<span style=font-size:'+i+'rem'+'>'+nome+'</span>'
+                }
+            })
+        </script>
+
+        <!-- Botão de aumentar fonte do texto do body para 2rem e diminuir a fonte do texto para 0.5rem -->
+        <button id="aumentar">AUMENTAR</button>
+        <button id="diminuir">DIMINUIR</button>
+        <script>
+            let aumentar = document.getElementById("aumentar")
+            let diminuir = document.getElementById("diminuir")
+            let body = document.body
+            aumentar.addEventListener("click", function(e) {
+                body.style.fontSize = '2rem'
+            })
+            diminuir.addEventListener("click", function(e){
+                body.style.fontSize = "0.5rem"
+            })
+        </script>
+    </body>
+</html>
