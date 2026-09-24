@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>LANCHES IFRN</title>
+    </head>
+    <body>
+        <div id="app">
+            <app-header></app-header>
+            <p>OI</p>
+            <p>{{mensagem}}</p> <!-- É possível usar como se fosse uma f"" do python-->
+            <p>{{lanches[0]}}</p>
+            <ol>
+                <li v-for="(lanche, index) in lanches":key="index">{{lanche}}</li>
+                <!-- Diretiva de v-for é uma estrutura e repetição
+                Lanche é a variável de controle dentro do for que representa o item atual do laço,
+                Index é a variável de controle do for que representa o início 0 -->
+            </ol>
+            <app-footer></app-footer>
+        </div>
+        <!-- Aqui é o vue -->
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+        <!-- O código precisa vir depois da chamada do vue -->
+        <script src="header.js"></script>
+        <script src="footer.js"></script>
+        <!-- O header é um componente e PRECISA ficar depois do Vue e antes do 'script.js', porque irá chamar a variável -->
+        <script src="script.js"></script>
+
+        <!-- Para criar um componente:
+        1. Criar o arquivo e definir a variável
+        2. Incluir o arquivo no html usando <script src="...">
+        3. Inserir o componente na aplicação: app.component(..., ...) ---- Precisa vir antes do mount
+        4. Colocar a marcação no html dentro da marcação com o id 'app' -->
+    </body>
+</html>
