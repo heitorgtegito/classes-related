@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LANCHES IFRN</title>
+    <link rel="stylesheet" href="../inc/principal.css">
+</head>
+<body>
+    <div id="app">
+        <app-header></app-header>
+        <main>
+            <h2>DASHBOARD ADMINISTRATIVO </h2>
+
+            <fieldset class="adicionar">
+                <legend>Inserir lanche</legend>
+                <input type="text" placeholder="Novo lanche..." v-model="novoLancheInput">
+                <button @click="novoLanche()" class="add">INSERIR</button>
+            </fieldset>
+
+            <ol>
+                <li class="lanche" v-for="lanche in lanches">{{lanche.descricao}}</li>
+            </ol>
+        </main>
+        
+        <app-footer></app-footer>
+
+    </div>
+
+
+    
+    
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="../inc/header-footer.js"></script>
+    <!-- precisa vir nessa ordem!! -->
+    <script src="../inc/script.js"></script>
+</body>
+</html>
