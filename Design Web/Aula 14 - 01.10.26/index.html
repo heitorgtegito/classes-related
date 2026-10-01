@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LANCHES IFRN</title>
+    <link rel="stylesheet" href="inc/principal.css">
+</head>
+<body>
+    <div id="app">
+        <app-header></app-header>
+        <main>
+        <h1>{{ mensagem }}</h1>
+        <p>
+
+        </p>
+        <ol>
+            <li v-for="lanche in lanches" 
+                    class="lanche"      
+                    :class="{selecionado: lanche.ativo}"
+                    @click="mudarAtivo(lanche)"
+            > 
+                <!-- diretivos são atributos -->
+                {{lanche.descricao}} 
+                {{lanche.ativo}}
+                <img :src="'imagens/'+lanche.imagem" width="50" alt="">
+            </li>
+        </ol>
+        <ol>
+            <li v-for="fruta in frutas" 
+                    class="fruta"      
+                    :class="{selecionado: fruta.ativo}"
+                    @click="mudarAtivo(fruta)"
+            > 
+                <!-- diretivos são atributos -->
+                {{fruta.descricao}} 
+                {{fruta.ativo}}
+                <img :src="'imagens/'+fruta.imagem" width="50" alt="">
+            </li>
+        </ol>
+        </main>
+        <app-footer></app-footer>
+    </div>
+
+    
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="inc/header-footer.js"></script>
+    <!-- precisa vir nessa ordem!! -->
+    <script src="inc/script.js"></script>
+</body>
+</html>
