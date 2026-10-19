@@ -1,0 +1,136 @@
+* {
+    font-family: "Century Gothic";
+}
+#app {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+h2 {
+    font-size: 3rem;
+}
+a {
+    color: black;
+    text-decoration: none;
+}
+a:hover {
+    color: #535153;
+    text-decoration:underline;
+}
+body {
+    margin: 0   ;
+    min-height: 100%;
+}
+header .header-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1300px;
+    margin: 0 auto;
+    height: 8rem;
+}
+header ul{
+    display: flex;
+    gap: 4rem;
+}
+article.main-content {
+    max-width: 1300px;
+    margin: 5rem auto;
+    flex: 1;
+}
+.integrantes a{
+    font-size: smaller;
+    font-weight: lighter;
+}
+.integrantes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 5rem 15rem;
+}
+.integrantes div {
+    width: 15rem;
+    height: 10rem;
+    text-align: center;
+    border: 1px dashed black;
+}
+.agendashows table {
+  width: 1300px;
+  max-width: 1300px;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.agendashows table th,
+.agendashows table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #cbcace;
+}
+
+.agendashows table th {
+  background-color: #cbcace;
+  font-weight: bold;
+}
+
+.agendashows table tbody tr:hover {
+  background-color: #f3f2f4;
+}
+
+.mural-fotos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 2rem;
+    list-style-type: none;
+}
+
+.mural-fotos li.poster{
+    border-radius: 2rem;
+    border: 4px dashed rgb(53, 0, 0);
+    padding: 1rem;
+    text-align: center;
+}
+.mural-fotos li.foto{
+    padding: 1rem;
+    border-radius: 2rem;
+    border: 4px dashed rgb(0, 0, 0);
+    text-align: center;
+}
+.mural-fotos li.foto img {
+    width: 320px;
+}
+.mural-fotos li.poster img {
+    width: 480px;
+}
+
+footer ul, footer li, header ul {
+    width: fit-content;
+    list-style-type: none;
+}
+footer {
+    margin-top: auto;
+    border-radius: 2rem 2rem 0 0;
+    background-color: #cbcace;
+}
+footer .footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+footer ul {
+    display: flex;
+    gap: 1.5rem;
+    padding-inline-start: 0;
+}
+.footer-esquerda{
+    display: flex;
+    gap: 4rem;
+    align-items: center;
+}
+.icons {
+    color: black; 
+    width: 20px;
+    height: 20px;
+}
