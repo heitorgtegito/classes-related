@@ -134,8 +134,8 @@ import peewee
 from playhouse.signals import Model, pre_save, post_save, pre_delete
 import datetime
 
-# 1. Conexão com o Banco SQLite em Memória
-db = peewee.SqliteDatabase(':memory:')
+# 1. Conexão com o Banco SQLite
+db = peewee.SqliteDatabase('banco_de_dados.db')
 
 class BaseModel(Model):
     class Meta:
