@@ -98,7 +98,7 @@ user.idade = 26
 user.save()  # Executa UPDATE no banco
 ```
 
-### 4.2. Atualização em Lote (`update()`)
+### 4.2. Atualização em Lote (`update().execute()`)
 Executa uma instrução `UPDATE` SQL diretamente no banco de dados. É performático para grandes volumes, mas não carrega instâncias para a memória nem dispara hooks/sinais.
 
 ```python
@@ -106,7 +106,7 @@ linhas_afetadas = Usuario.update(idade=Usuario.idade + 1).where(Usuario.idade >=
 print(f"Registros atualizados: {linhas_afetadas}")
 ```
 
-### 4.3. Exclusão de Instância (`delete()`)
+### 4.3. Exclusão de Instância (`delete_instance()`)
 Remove o registro do banco referente àquela instância e dispara o sinal `pre_delete`.
 
 ```python
