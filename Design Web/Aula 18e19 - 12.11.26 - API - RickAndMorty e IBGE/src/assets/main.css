@@ -1,0 +1,22 @@
+body {
+    background-color: rgb(240, 240, 240);
+}
+body h2 {
+    font-size: 48px;
+    text-align: center;
+}
+body p {
+    font-size: 36px;
+    text-align: center;
+}
+.card-grid {
+    display: flex;
+    justify-content: center;
+}
+.card-grid card p {
+    font-size: 24px;
+}
+.card-grid a {
+    color: black;
+    text-decoration: none;
+}
